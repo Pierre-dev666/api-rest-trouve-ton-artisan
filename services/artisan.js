@@ -25,8 +25,8 @@ exports.createArtisan = async (req, res, next) => {
 
 exports.getAllArtisans = async (req, res) => {
     try {
-        const Artisans = await Artisans.find();
-        res.json(Artisans);
+        const artisans = await Artisans.find();
+        res.json(artisans);
     } catch (error) {
         res.status(500).json(error);
     }
