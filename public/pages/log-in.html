@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/log-in.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <h1>Port de Plaisance RUSSELL</h1>
+        </a>
+    </header>
+
+    <main id="log-in-form-center">
+        <section id="grid_log-in">
+            <figure id="with-grid">
+                <form action="" method="post" id="bloc-1_log-in">
+                    <h2>Se connecter</h2>
+
+                    <span id="username-bloc">
+                        <label for="username">Identifiant :</label>
+                        <input type="text" placeholder="Identifiant ou email " id="username" name="username" value=""
+                            required autocomplete="#">
+                    </span>
+
+                    <span id="password-bloc">
+                        <label for="pass">Mot de passe <br> (7 charact min) :</label>
+                        <input type="password" placeholder="Mot de passe" id="pass" name="password" value=""
+                            minlength="7" required autocomplete="#">
+                    </span>
+                    <span id="submit-bloc">
+                        <button type="submit" id="log-in_submit" value="Connexion">Connexion</button>
+                    </span>
+
+                    <span id="create-account">
+                        <a href="./create-new-account.html">Créer un nouveau compte</a>
+                    </span>
+                    <span id="unable-to-log-in">
+                        <a href="#">Impossible de se connecter ?</a>
+                    </span>
+                </form>
+            </figure>
+        </section>
+    </main>
+
+</body>
+
+</html>

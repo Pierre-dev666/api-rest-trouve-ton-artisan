@@ -1,0 +1,28 @@
+[
+    {
+        "id": "1",
+        "nom_entreprise": "J.DO& Renov’",
+        "artisan_adresse": "Place du Dr Esquirol 47000 Agen",
+        "artisan_localisation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2860.1905450670874!2d0.6128285766905154!3d44.2031418166883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12abb32406fdc409%3A0x67cad6a09c0605c2!2sPl.%20du%20 Dr%20d Esquirol%2C%2047000%20 Agen!5e0!3m2!1sfr!2sfr!4v1750936006841!5m2!1sfr!2sfr",
+        "artisan_email": "JDO&Renov@mailtest.fr",
+        "artisan_website": "https://JDO&Renov.fr",
+        "artisan_logo": "",
+        "artisan_note": "4",
+        "artisan_speciality": "Rénovation",
+        "artisan_category": "batiment",
+        "artisan_about": ""
+    },
+    {
+        "id": "2",
+        "nom_entreprise": "Batinov’",
+        "artisan_adresse": "1 Rue du Dr et Madame Delmas 47000 Agen",
+        "artisan_localisation": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m1d2860.1905450670874!2d0.6128285766905154!3d44.2031418166883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12abb32406fdc409%3A0x67cad6a09c0605c2!2sPl.%20du%20 Dr%20d Esquirol%2C%2047000%20 Agen!5e0!3m2!1sfr!2sfr!4v1750936006841!5m2!1sfr!2sfr",
+        "artisan_email": "Batinov@mailtest.fr",
+        "artisan_website": "https://Batinov.fr",
+        "artisan_logo": "https://www.mazet-batiment.com/wp-content/uploads/2016/05/locaux-siege-mazet.jpg",
+        "artisan_note": "4",
+        "artisan_speciality": "Construction",
+        "artisan_category": "batiment",
+        "artisan_about": ""
+    }
+]

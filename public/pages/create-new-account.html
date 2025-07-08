@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/create-new-account.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <h1>Port de Plaisance RUSSELL</h1>
+        </a>
+    </header>
+    <main id="log-in-form-center">
+        <section id="grid_log-in">
+            <figure id="with-grid">
+                <form id="bloc-1_log-in">
+                    <h2>Créer un compte</h2>
+
+                    <span id="username-bloc">
+                        <label for="create-username">Identifiant <br> (7 charact min) :</label>
+                        <input type="text" placeholder="Identifiant" id="create-username" name="username" value=""
+                            minlength="7" required autocomplete="#">
+                    </span>
+                    <span id="mail-bloc">
+                        <label for="create-mail">Adresse mail <br> (7 charact min) :</label>
+                        <input type="email" placeholder="Adresse mail" id="create-mail" name="mail" value=""
+                            minlength="7" required autocomplete="#">
+                    </span>
+                    <span id="password-bloc">
+                        <label for="create-password">Mot de passe <br> (7 charact min) :</label>
+                        <input type="password" placeholder="Mot de passe" id="create-password" name="password" value=""
+                            minlength="7" required autocomplete="#">
+                    </span>
+                    <span id="submit-bloc">
+                        <input type="submit" id="create-new-account_submit" value="Créer"></input>
+                    </span>
+
+                </form>
+            </figure>
+        </section>
+    </main>
+        <script src="../javascripts/create-new-account.js"></script>
+</body>
+
+</html>

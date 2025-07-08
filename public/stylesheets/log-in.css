@@ -1,0 +1,139 @@
+#grid_log-in {
+    margin-bottom: 20px;
+
+}
+
+#log-in-form-center {
+    height: auto;
+    width: 400px;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#bloc-1_log-in {
+    display: grid;
+    width: 300px;
+    height: 450px;
+    justify-content: space-around;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #92ccff, 0 -2px 10px #92ccff, 2px 0 10px #92ccff, -2px 0 10px #92ccff;
+    align-items: center;
+    margin-top: initial;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(8, 40px);
+    gap: 18px;
+
+}
+
+h2 {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    width: 305px;
+    height: 38px;
+    font-family: 'lexend', Times, serif;
+    font-weight: 900;
+    text-decoration: underline;
+    font-style: normal;
+    text-transform: none;
+    font-size: 1.5em;
+    background-color: black;
+    color: white;
+    text-shadow: 2px 0 10px black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #92ccff, 0 -2px 10px #92ccff, 2px 0 10px #92ccff, -2px 0 10px #92ccff;
+    text-align: center;
+    margin-left: -5px;
+    cursor: default;
+}
+
+#username-bloc {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    text-align: center;
+    margin-left: 78px;
+    font-family: 'lexend', Times, serif;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #0088ff;
+    text-shadow: 2px 0 20px #92ccff;
+    font-size: larger;
+}
+
+#username {
+    width: 140px;
+    height: 20px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+#password-bloc {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    text-align: center;
+    margin-left: 78px;
+    font-family: 'lexend', Times, serif;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #0088ff;
+    text-shadow: 2px 0 20px #92ccff;
+    margin-top: 60px;
+    font-size: larger;
+}
+
+#pass {
+    width: 140px;
+    height: 20px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+#submit-bloc {
+    grid-column: 2 / span 3;
+    grid-row: 5;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+#log-in_submit {
+    width: 100px;
+    height: 28px;
+    border-color: #92ccff;
+    border-radius: 10%;
+    background-color: black;
+    font-family: 'lexend', Times, serif;
+    font-weight: 500;
+    text-decoration: underline;
+    color: white;
+    text-shadow: 2px 0 10px #92ccff;
+    cursor: pointer;
+    font-size: larger;
+}
+
+#log-in_submit:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+#create-account {
+    grid-column: 1 / span 4;
+    grid-row: 7;
+    margin-left: 70px;
+    margin-top: 15px;
+        font-size: larger;
+}
+
+#unable-to-log-in {
+    grid-column: 1 / span 4;
+    grid-row: 8;
+    margin-left: 60px;
+    margin-bottom: 40px;
+        font-size: larger;
+}

@@ -1,0 +1,14 @@
+a {
+    margin-left: auto;
+    display: grid;
+    justify-items: center;
+}
+
+#to-log-in {
+    margin: 10px;
+    margin-left: auto;
+}
+
+#log-in_icon {
+    width: 70px;
+}
