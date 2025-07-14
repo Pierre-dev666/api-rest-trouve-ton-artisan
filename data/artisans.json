@@ -7,7 +7,7 @@
         "artisan_email": "JDO&Renov@mailtest.fr",
         "artisan_website": "https://JDO&Renov.fr",
         "artisan_logo": "",
-        "artisan_note": "4",
+        "artisan_note": 4,
         "artisan_speciality": "Rénovation",
         "artisan_category": "batiment",
         "artisan_about": ""
@@ -20,7 +20,7 @@
         "artisan_email": "Batinov@mailtest.fr",
         "artisan_website": "https://Batinov.fr",
         "artisan_logo": "https://www.mazet-batiment.com/wp-content/uploads/2016/05/locaux-siege-mazet.jpg",
-        "artisan_note": "4",
+        "artisan_note": 4,
         "artisan_speciality": "Construction",
         "artisan_category": "batiment",
         "artisan_about": ""

@@ -55,23 +55,22 @@
         <input type="text" id="artisanLogo"><br>
 
         <label for="artisanNote">Note de l'entreprise</label>
-        <select id="artisanNote" required>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select><br>
+        <input type="number" max="5" step="any" id="artisanNote" required><br>
+            
 
         <label for="artisanSpeciality">Spécialité de l'entreprise:</label>
         <input type="text" id="artisanSpeciality" required><br>
 
         <label for="artisanCategory">Catégorie de l'entreprise:</label>
-        <input type="text" id="artisanCategory" required><br>
+        <select type="text" id="artisanCategory" required>
+            <option value="Batiment">Batiment</option>
+            <option value="Services">Services</option>
+            <option value="Fabrication">Fabrication</option>
+            <option value="Alimentation">Alimentation</option>
+        </select><br>
 
         <label for="artisanAbout">A propos de l'entreprise:</label>
-        <input type="text" id="artisanAbout"><br>
+        <textarea type="text" id="artisanAbout"></textarea><br>
 
         <button type="submit">Sauvegarder</button>
     </form>

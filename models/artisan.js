@@ -28,9 +28,9 @@ const artisanSchema = new mongoose.Schema({
         type: String
     },
     artisan_note: {
-        type: String,
+        type: Number,
         required: true,
-        enum: ['0', '1', '2', '3', '4', '5']
+        max: [5]
     },
     artisan_speciality: {
         type: String,
@@ -38,7 +38,8 @@ const artisanSchema = new mongoose.Schema({
     },
     artisan_category: {
         type: String,
-        required: true
+        required: true,
+        enum: ['Batiment','Services','Fabrication','Alimentation']
     },
     artisan_about: {
         type: String
