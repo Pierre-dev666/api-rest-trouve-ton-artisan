@@ -49,9 +49,7 @@ app.get('/users-page', (req, res) => {
 app.get('/artisans-page', (req, res) => {
     res.render('artisan');
 });
-app.get('/catways/:id/reservations-page', (req, res) => {
-    res.render('reservation');
-});
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -17,11 +17,13 @@ const artisanSchema = new mongoose.Schema({
         unique: true
     },
     artisan_email: {
-        type: String, 
+        type: String,
+        required: true, 
         unique: true
     },
     artisan_website: {
-        type: String, 
+        type: String,
+        required: false, 
         unique: true
     },
     artisan_logo: {
