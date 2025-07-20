@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             artisan_category: artisan_categoryInput.value,
             artisan_about: artisan_aboutInput.value
         };
-        const method = artisanId ? 'PATCH' : 'POST';
+        const method = artisanId ? 'PUT' : 'POST';
         const url = artisanId ? `/artisans/${artisanId}` : '/artisans';
 
         fetch(url, {
