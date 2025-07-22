@@ -11,11 +11,11 @@ exports.initClientDbConnection = async () => {
             throw new Error('DB_URL est vide ou non défini');
         }
 
-        console.log('Connexion à MongoDB via :', mongoUrl);
+        console.log('DB_URL:', mongoUrl);
         await mongoose.connect(mongoUrl, clientOptions);
         console.log('✅ Connexion MongoDB réussie');
     } catch (error) {
-        console.error('❌ Erreur de connexion MongoDB :', error.message);
+        console.error('❌ Erreur MongoDB :', error.message);
         console.error(error.stack);
         throw error;
     }
