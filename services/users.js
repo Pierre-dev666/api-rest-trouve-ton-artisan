@@ -48,10 +48,10 @@ exports.update = async (req, res, next) => {
     });
 
     try {
-        let user = await User.findOne({email: email});
+        let user = await User.findOne({ email: email });
 
         if (user) {
-            Object.keys(temp).forEach((key) =>{
+            Object.keys(temp).forEach((key) => {
                 if (!!temp[key]) {
                     user[key] = temp[key];
                 }
@@ -72,7 +72,7 @@ exports.delete = async (req, res, next) => {
     const email = req.params.email
 
     try {
-        await User.deleteOne({email : email});
+        await User.deleteOne({ email: email });
 
         return res.status(204).json('delete_ok');
     } catch (error) {
@@ -81,7 +81,7 @@ exports.delete = async (req, res, next) => {
 }
 
 exports.authenticate = async (req, res, next) => {
-    const {email, password } = req.body;
+    const { email, password } = req.body;
 
     try {
         let user = await User.findOne({ email: email }, '-__v -createdAt -updatedAt');
@@ -95,23 +95,21 @@ exports.authenticate = async (req, res, next) => {
                     console.log("🔐 JWT_SECRET =", process.env.JWT_SECRET);
                     delete user._doc.password;
                     const expireIn = 24 * 60 * 60;
-                    const token = jwt.sign({
-                        user: user
-                    },
-                    process.env.SECRET_KEY,
-                    {
-                        expiresIn: expireIn
-                    });
+                    const token = jwt.sign(
+                        { user: user },
+                        process.env.JWT_SECRET,
+                        { expiresIn: expireIn }
+                    );
 
                     res.header('Authorization', 'Bearer ' + token);
 
-                    return res.status(200).json({message: 'authenticate_succeed', token: token});
+                    return res.status(200).json({ message: 'authenticate_succeed', token: token });
                 }
 
                 return res.status(403).json('wrong_credentials');
             });
-        }   else {
-        return res.status(404).json('user_not_found');
+        } else {
+            return res.status(404).json('user_not_found');
         }
     } catch (error) {
         return res.status(501).json(error);
@@ -122,8 +120,8 @@ exports.logout = async (req, res, next) => {
     try {
         const token = req.headers.authorization.split(' ')[1];
 
-        const decoded = jwt.verify(token, process.env.SECRET_KEY);
-        
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
         return res.status(200).json('logout_succeed');
     } catch (error) {
         return res.status(500).json('Internal_server_error');
