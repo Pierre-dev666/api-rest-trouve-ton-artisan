@@ -92,6 +92,7 @@ exports.authenticate = async (req, res, next) => {
                     throw new Error(err);
                 }
                 if (response) {
+                    console.log("🔐 JWT_SECRET =", process.env.JWT_SECRET);
                     delete user._doc.password;
                     const expireIn = 24 * 60 * 60;
                     const token = jwt.sign({
