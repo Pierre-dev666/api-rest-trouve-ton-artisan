@@ -6,35 +6,38 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        fetch('/users/authenticate', {
+        // Remplace cette URL par celle de ton backend Render :
+        const API_URL = 'https://api-rest-trouve-ton-artisan.onrender.com/users/authenticate';
+
+        fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ email: emailInput.value, password: passwordInput.value }),
         })
-        .then(response => {
+        .then(async (response) => {
             if (!response.ok) {
-                return response.json().then(data => {
-                    throw new Error(data || 'Erreur d\'authentification');
-                });
+                let message = 'Erreur d\'authentification';
+                try {
+                    const errorData = await response.json();
+                    message = errorData.message || message;
+                } catch (_) {
+                    // Pas de JSON retourné, garder le message par défaut
+                }
+                throw new Error(message);
             }
             return response.json();
         })
         .then(data => {
             console.log('Réponse du serveur:', data);
-            // Récupérer le token de la réponse
             const token = data.token;
-
-            // Stocker le token (localStorage est un exemple)
             localStorage.setItem('jwtToken', token);
-
-            // Rediriger vers le tableau de bord
             window.location.href = '/dashboard';
         })
         .catch(error => {
-            console.error('Erreur d\'authentification:', error);
-            // Ici, tu peux afficher un message d'erreur à l'utilisateur dans ta page login.html
+            console.error('Erreur d\'authentification:', error.message);
+            alert('Échec de connexion : ' + error.message);
         });
     });
 });
