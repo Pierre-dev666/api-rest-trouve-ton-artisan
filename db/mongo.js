@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const mongoUrl = process.env.DB_URL;
+const port = process.env.PORT || 3000;
 
 const clientOptions = {
     dbName : 'apinode'
