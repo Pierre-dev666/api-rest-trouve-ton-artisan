@@ -1,19 +1,22 @@
 const mongoose = require('mongoose');
-const mongoUrl = process.env.DB_URL;
-const port = process.env.PORT || 3000;
 
+const mongoUrl = process.env.DB_URL;
 const clientOptions = {
-    dbName : 'apinode'
+    dbName: 'apinode'
 };
 
 exports.initClientDbConnection = async () => {
     try {
-        console.log('URL_MONGO:', process.env.URL_MONGO)
-        await mongoose.connect(process.env.URL_MONGO, clientOptions)
-        console.log('connected');
+        if (!mongoUrl) {
+            throw new Error('DB_URL est vide ou non défini');
+        }
+
+        console.log('Connexion à MongoDB via :', mongoUrl);
+        await mongoose.connect(mongoUrl, clientOptions);
+        console.log('✅ Connexion MongoDB réussie');
     } catch (error) {
-        console.log(error);
-        console.log(error.stack);
+        console.error('❌ Erreur de connexion MongoDB :', error.message);
+        console.error(error.stack);
         throw error;
     }
-}
+};
